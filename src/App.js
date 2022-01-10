@@ -26,6 +26,7 @@ import {
   gameFiData,
   landData,
   gameProgressData,
+  roadMapData,
   teamData,
   footerData,
 } from "./data/Data";
@@ -43,7 +44,7 @@ function App() {
       <LandSection data={landData} />
       <GameProgressSelection data={gameProgressData} />
       <VideoSection data={foxyCoinData} />
-      <RoadMapSection />
+      <RoadMapSection data={roadMapData} />
       <TeamSection data={teamData} />
       <Footer data={footerData} />
     </main>
