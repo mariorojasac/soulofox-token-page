@@ -11,9 +11,13 @@ const GameProgressSelection = ({ data }) => {
         </div>
 
         <div className="container flex">
-          <div className="flex justify-around">
-            <img src={data.image1} alt="" />
-            <img src={data.image2} alt="" />
+          <div className="flex justify-around flex-row">
+            <div>
+              <img src={data.image1} alt="" className="object-contain" />
+            </div>
+
+            <div><img src={data.image2} alt="" className="object-contain" /></div>
+            
           </div>
         </div>
         <div className="container">
