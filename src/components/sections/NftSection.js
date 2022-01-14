@@ -13,13 +13,13 @@ const NftSection = ({ data }) => {
       <div className="flex flex-wrap">
         <div className="w-full container">
           <ul
-            className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
+            className="flex mb-0 list-none flex pt-3 pb-4 flex-row "
             role="tablist"
           >
-            <li className="-mb-px mr-2 pl-10 last:mr-0 flex-auto text-center">
+            <li className="-mb-px mr-2 pl-10 last:mr-0 flex-auto text-center ">
               <a
                 className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
+                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal sm:m-4" +
                   (openTab === 1 ? "text-white bg-200" : "text-black bg-300")
                 }
                 onClick={(e) => {
@@ -54,32 +54,42 @@ const NftSection = ({ data }) => {
           <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded">
             <div className="px-4 py-5 flex-auto">
               <div className="tab-content tab-space pl-6">
-                <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                  <div className=" max-w-2xl  md:text-left  whitespace-normal pt-5 flex">
-                    <ul>
+                <div
+                  className={
+                    openTab === 1 ? "block md:flex sm:flew-row" : "hidden"
+                  }
+                  id="link1"
+                >
+                  <div className=" max-w-lg  md:text-left  whitespace-normal pt-5">
+                    <ul className="">
                       {data.souloText.map((text) => {
                         return (
                           <li key={text.id} className="flex mb-5">
                             <div className="mr-4 text-200">
                               <i className="fas fa-dot-circle"></i>
                             </div>
-                            <div>
+                            <div className="">
                               <p>{text.text}</p>
                             </div>
                           </li>
                         );
                       })}
                     </ul>
-                    <img
-                      src={data.image.imageSrc}
-                      alt=""
-                      srcset=""
-                      className=""
-                    />
                   </div>
+                  <img
+                    src={data.image.imageSrc}
+                    alt=""
+                    srcset=""
+                    className="md:ml-auto object-contain"
+                  />
                 </div>
-                <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                  <div className=" max-w-2xl  md:text-left  whitespace-normal pt-5 flex">
+                <div
+                  className={
+                    openTab === 2 ? "block md:flex sm:flew-row" : "hidden"
+                  }
+                  id="link2"
+                >
+                  <div className=" max-w-lg  md:text-left  whitespace-normal pt-5">
                     <ul>
                       {data.communityText.map((text) => {
                         return (
@@ -94,13 +104,14 @@ const NftSection = ({ data }) => {
                         );
                       })}
                     </ul>
-                    <img
-                      src={data.image2.imageSrc}
-                      alt=""
-                      srcset=""
-                      className=""
-                    />
                   </div>
+
+                  <img
+                    src={data.image2.imageSrc}
+                    alt=""
+                    srcset=""
+                    className="md:ml-auto object-contain"
+                  />
                 </div>
               </div>
             </div>

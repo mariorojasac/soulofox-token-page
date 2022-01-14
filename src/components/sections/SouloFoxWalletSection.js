@@ -7,7 +7,7 @@ const SouloFoxWalletSection = ({ data }) => {
         </h2>
       </div>
 
-      <div className="container">
+      <div className="container mb-4">
         <p>{data.subHeading}</p>
       </div>
 
@@ -17,17 +17,20 @@ const SouloFoxWalletSection = ({ data }) => {
         </div>
 
         <div className="w-1/2 ">
-          <p className="">
-            <img src={data.imageSrc1} alt="" srcset="" />
-          </p>
+          <img
+            src={data.imageSrc1}
+            alt=""
+            srcset=""
+            className=""
+          />
         </div>
       </div>
 
       <div className="container flex ">
         <div className="w-1/2 ">
-          <p className="">
-            <img src={data.imageSrc2} alt="" srcset="" />
-          </p>
+          
+            <img src={data.imageSrc2} alt="" srcset="" className="pb-4"/>
+        
         </div>
 
         <div className="w-1/2 ">
@@ -41,9 +44,9 @@ const SouloFoxWalletSection = ({ data }) => {
         </div>
 
         <div className="w-1/2 ">
-          <p className="">
-            <img src={data.imageSrc3} alt="" srcset="" />
-          </p>
+          
+            <img src={data.imageSrc3} alt="" srcset=""className=""/>
+        
         </div>
       </div>
     </section>
