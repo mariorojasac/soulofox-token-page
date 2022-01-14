@@ -54,8 +54,13 @@ const NftSection = ({ data }) => {
           <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded">
             <div className="px-4 py-5 flex-auto">
               <div className="tab-content tab-space pl-6">
-                <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                  <div className=" max-w-2xl  md:text-left  whitespace-normal pt-5 md:flex sm:flex-row">
+                <div
+                  className={
+                    openTab === 1 ? "block md:flex sm:flew-row" : "hidden"
+                  }
+                  id="link1"
+                >
+                  <div className=" max-w-lg  md:text-left  whitespace-normal pt-5">
                     <ul className="">
                       {data.souloText.map((text) => {
                         return (
@@ -70,18 +75,21 @@ const NftSection = ({ data }) => {
                         );
                       })}
                     </ul>
-                    <div className="container">
-                      <img
-                        src={data.image.imageSrc}
-                        alt=""
-                        srcset=""
-                        className="object-contain"
-                      />
-                    </div>
                   </div>
+                  <img
+                    src={data.image.imageSrc}
+                    alt=""
+                    srcset=""
+                    className="md:ml-auto object-contain"
+                  />
                 </div>
-                <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                  <div className=" max-w-2xl  md:text-left  whitespace-normal pt-5 md:flex sm:flex-row">
+                <div
+                  className={
+                    openTab === 2 ? "block md:flex sm:flew-row" : "hidden"
+                  }
+                  id="link2"
+                >
+                  <div className=" max-w-lg  md:text-left  whitespace-normal pt-5">
                     <ul>
                       {data.communityText.map((text) => {
                         return (
@@ -96,15 +104,14 @@ const NftSection = ({ data }) => {
                         );
                       })}
                     </ul>
-                    <div className="container">
-                      <img
-                        src={data.image2.imageSrc}
-                        alt=""
-                        srcset=""
-                        className="object-contain"
-                      />
-                    </div>
                   </div>
+
+                  <img
+                    src={data.image2.imageSrc}
+                    alt=""
+                    srcset=""
+                    className="md:ml-auto object-contain"
+                  />
                 </div>
               </div>
             </div>
