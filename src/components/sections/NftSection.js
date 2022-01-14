@@ -13,7 +13,7 @@ const NftSection = ({ data }) => {
       <div className="flex flex-wrap">
         <div className="w-full container">
           <ul
-            className="flex mb-0 list-none flex pt-3 pb-4 flex-row "
+            className="flex mb-0 list-none pt-3 pb-4 flex-row "
             role="tablist"
           >
             <li className="-mb-px mr-2 pl-10 last:mr-0 flex-auto text-center ">
